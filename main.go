@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	http.HandleFunc("/api/bookings", createBooking)
 	http.HandleFunc("/api/rooms/", getRoom)
 	http.HandleFunc("/api/rooms", listRooms)
 	http.HandleFunc("/health", healthHandler)
